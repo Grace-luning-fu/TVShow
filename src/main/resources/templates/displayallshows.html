@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta http-equiv="Content-Type" content = "text/html; charset=UTF-8"/>
+    <title>Book Database</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th>Name of show</th>
+        <th>Number of Seasons</th>
+        <th>Summary</th>
+        <th>Genre</th>
+        <th>Duration</th>
+    </tr>
+
+    <tr th:each="show : ${allshows}">
+        <td th:text="${show.name}"></td>
+        <td th:text="${show.numofSeasons}"></td>
+        <td th:text="${show.summary}"></td>
+        <td th:text="${show.genre}"></td>
+        <td th:text="${show.duration}"></td>
+
+    </tr>
+
+</table>
+
+</body>
+</html>

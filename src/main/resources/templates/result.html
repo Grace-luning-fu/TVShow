@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <title>Addition Result</title>
+    <meta http-equiv="Content-Type" content = "text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>Result</h1>
+<p th:text="'Name:'+ ${newTVShows.name}"/></p>
+<p th:text="'Number of Seasons:'+ ${newTVShows.numofSeasons}" /></p>
+<p th:text="'Summary:'+ ${newTVShows.summary}" /></p>
+<p th:text="'Genre:'+ ${newTVShows.genre}" /></p>
+<p th:text="'Duration:'+ ${newTVShows.duration}" /></p>
+<a href="/addproduct">Submit another Book</a>
+<a href="/displayallshows">List all the TV shows in the database</a>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content = "text/html; charset=UTF-8" />
+</head>
+<body>
+<p>This is where you add the TV shows information. Add a show in the following form:</p>
+<h1>TV show Form</h1>
+<form action = "#" th:action="@{/addshows}" th:object="${newTVShows}" method="post">
+
+    <span th:if="${#fields.hasErrors('name')}" th:error="*{name}">Name has error</span>
+    <p>Enter name of the show: <input type="text" th:field="*{name}" /></p>
+
+    <span th:if="${#fields.hasErrors('numofSeasons')}" th:error="*{numofSeasons}">Number of Seasons has error</span>
+    <p>Enter Number of Seasons: <input type="text" th:field="*{numofSeasons}" /></p>
+
+    <span th:if="${#fields.hasErrors('summary')}" th:error="*{summary}">Summary has error</span>
+    <p>Enter Summary: <input type="text" th:field="*{summary}" /></p>
+
+    <span th:if="${#fields.hasErrors('genre')}" th:error="*{genre}">Genre has error</span>
+    <p>Enter genre: <input type="text" th:field="*{genre}" /></p>
+
+    <span th:if="${#fields.hasErrors('duration')}" th:error="*{duration}">Duration has error</span>
+    <p>Enter Duration: <input type="text" th:field="*{duration}" /></p>
+
+    <p><input type="submit" value="Add show" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</html>
